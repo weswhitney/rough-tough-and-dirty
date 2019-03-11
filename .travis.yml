@@ -3,4 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t react-app .
+  - docker build -t wesleywhitney/react-example2 .
+  - docker images wesleywhitney/react-example2
+
+before_deploy:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+deploy:
+  provider: script
+  script: docker push wesleywhitney/react-example2
+  on:
+    branch: master

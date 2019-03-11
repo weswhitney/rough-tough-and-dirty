@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload. And, also I changed this up.
+            Edit <code>src/App.js</code> and save to reload. And, also I changed this up, and now this to test the travis CI.
           </p>
           <a
             className="App-link"
